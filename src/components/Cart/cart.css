@@ -1,0 +1,41 @@
+.cartDialog {
+  max-height: 600px;
+}
+
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.cartItem:not(:last-child) {
+  border-bottom: 2px solid rgb(222, 222, 222);
+}
+
+.imgContainer img {
+  width: 50px;
+  height: 75px;
+}
+
+.cancelIcon {
+  color: red;
+}
+
+.infoContainer {
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.priceContainer {
+  font-size: 24px;
+  color: rgb(107, 45, 92);
+  font-weight: bolder;
+}
+
+.totalPrice {
+  color: rgb(107, 45, 92);
+  font-weight: bolder;
+}

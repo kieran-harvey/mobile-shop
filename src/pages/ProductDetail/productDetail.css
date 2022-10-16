@@ -1,0 +1,107 @@
+.detailsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.specsContainer .specsTitle {
+  font-size: 28px;
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+@media (max-width: 768px) {
+  .detailsContainer .specsContainer {
+    margin-left: 1em;
+  }
+}
+
+.specsContainer .specsModel {
+  font-size: 24px;
+  color: rgb(110, 110, 110);
+  font-style: oblique;
+}
+
+.specsContainer .specsPrice {
+  font-size: 32px;
+  color: rgb(107, 45, 92);
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    justify-content: center;
+  }
+}
+
+.imageContainer img {
+  width: 350px;
+  height: 450px;
+}
+
+@media (max-width: 425px) {
+  .imageContainer img {
+    width: 250px;
+    height: 315px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageContainer img {
+    width: 315px;
+    height: 400px;
+    margin-top: 6em;
+  }
+}
+
+.detailsContainer .actionsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.colorExample {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.actionsContainer .addToCartButton {
+  background-color: rgb(107, 45, 92);
+  color: white;
+  border-radius: 50px;
+  padding: 12px;
+  font-weight: bolder;
+  font-style: italic;
+  width: 225px;
+}
+
+.actionsContainer .addToCartButton:hover {
+  background-color: rgb(150, 76, 131);
+}
+
+.actionsContainer .showMore {
+  font-size: 16px;
+  color: rgb(71, 71, 71);
+}
+
+.actionsContainer .showMoreContainer {
+  font-size: 16px;
+  color: rgb(71, 71, 71);
+}
+
+.actionsContainer .buttonContainer {
+  margin: 2em 0 2em 0;
+}

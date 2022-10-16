@@ -1,0 +1,12 @@
+.dialogContentContainer div {
+  padding: 0.5em;
+}
+
+.dialogContentContainer div > p {
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.dialogContentContainer div > span {
+  margin-top: 0.5em;
+}

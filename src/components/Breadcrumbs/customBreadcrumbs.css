@@ -1,0 +1,25 @@
+.breadcrumbs span {
+  font-size: 18px;
+  color: white;
+}
+
+@media (max-width: 425px) {
+  .breadcrumbs span {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 678px) {
+  .breadcrumbs span {
+    font-size: 15px;
+  }
+}
+
+.breadcrumbs {
+  margin-left: 1em !important;
+}
+
+.breadcrumbs .MuiBreadcrumbs-separator {
+  color: white;
+  font-size: 18px;
+}

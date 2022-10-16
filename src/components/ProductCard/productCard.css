@@ -1,0 +1,38 @@
+.productCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+.productCardContainer img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 1em;
+}
+
+.cardContentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContentContainer .productBrand {
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+.cardContentContainer .productModel {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.cardContentContainer .productPrice {
+  color: rgb(107, 45, 92);
+  font-size: 24px !important;
+}

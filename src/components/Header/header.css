@@ -1,0 +1,74 @@
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(107, 45, 92);
+}
+
+.toolbar .titleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toolbar .shoppingCartContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toolbar .breadcrumbContainer {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar a {
+  text-decoration: none;
+}
+
+.toolbar .appTitle {
+  font-size: 42px;
+  font-weight: bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .toolbar .appTitle {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .toolbar .appTitle {
+    font-size: 24px;
+  }
+}
+
+.toolbar .titleIcon {
+  font-size: 48px;
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .toolbar .titleIcon {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .toolbar .titleIcon {
+    font-size: 24px;
+  }
+}
+
+.toolbar .shoppingCartIcon {
+  font-size: 48px;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+@media (min-width: 425px) and (max-width: 1023px) {
+  .toolbar .shoppingCartIcon {
+    font-size: 24px;
+  }
+}
