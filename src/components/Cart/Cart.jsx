@@ -6,6 +6,8 @@ import {
   DialogTitle,
   DialogContent,
   Typography,
+  Button,
+  DialogActions,
 } from "@mui/material";
 import "./cart.css";
 import CancelIcon from "@mui/icons-material/Cancel";
@@ -19,7 +21,9 @@ export const Cart = ({ open, setOpen }) => {
   const calcTotal = () => {
     let total = 0;
     cartItems.map((item) => {
-      total += parseInt(item.price);
+      if (item.price !== "") {
+        total += parseInt(item.price);
+      }
     });
     return total;
   };
@@ -27,9 +31,7 @@ export const Cart = ({ open, setOpen }) => {
     <Dialog open={open} onClose={() => setOpen(false)} className="cartDialog">
       <DialogTitle>
         CART
-        <Typography>
-          Total Price:<span className="totalPrice">{calcTotal()}€</span>
-        </Typography>
+        <span className="totalPrice">{calcTotal()}€</span>
       </DialogTitle>
       <DialogContent className="cartDialogContent">
         <Grid container className="cartContainer">
@@ -63,6 +65,11 @@ export const Cart = ({ open, setOpen }) => {
             : "You dont have anything in your cart yet"}
         </Grid>
       </DialogContent>
+      <DialogActions className="dialogActions">
+        <Button className="checkoutButton">
+          <Typography>Checkout</Typography>
+        </Button>
+      </DialogActions>
     </Dialog>
   );
 };

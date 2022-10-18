@@ -10,7 +10,8 @@ import {
   Typography,
   Snackbar,
 } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { ArrowBack } from "@mui/icons-material";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import "./productDetail.css";
 import CartContext from "../../context/CartContext";
@@ -74,6 +75,12 @@ export const ProductDetail = () => {
   return (
     <div className="detailsContainer">
       <Grid container className="detailsContainerGrid" spacing={3}>
+        <Grid item xs={12}>
+          <Link to={"/"} className="goBackLink">
+            <ArrowBack />
+            GO BACK
+          </Link>
+        </Grid>
         <Grid item xs={12} lg={6} md={6} className="imageContainer">
           <img src={details?.imgUrl} />
         </Grid>

@@ -6,6 +6,10 @@
   height: 90vh;
 }
 
+.detailsContainerGrid {
+  height: 100%;
+}
+
 .specsContainer .specsTitle {
   font-size: 28px;
   font-weight: bolder;
@@ -14,7 +18,7 @@
 
 @media (max-width: 768px) {
   .detailsContainer .specsContainer {
-    margin-left: 1em;
+    margin-left: 10%;
   }
 }
 
@@ -31,8 +35,8 @@
 
 .imageContainer {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -90,6 +94,7 @@
 
 .actionsContainer .addToCartButton:hover {
   background-color: rgb(150, 76, 131);
+  animation: shake 0.5s;
 }
 
 .actionsContainer .showMore {
@@ -104,4 +109,37 @@
 
 .actionsContainer .buttonContainer {
   margin: 2em 0 2em 0;
+}
+
+.goBackLink {
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+.goBackLink svg {
+  font-size: 18px;
+}
+.goBackLink:visited {
+  color: black;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

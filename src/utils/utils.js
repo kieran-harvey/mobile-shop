@@ -12,6 +12,7 @@ export const checkValidationKey = () => {
     if (key.expiry > new Date().getTime()) {
       return true;
     } else {
+      localStorage.clear();
       setValidationKey();
       return true;
     }
