@@ -64,7 +64,7 @@ export const setItemToCartStorage = (item) => {
   if (localStorage.getItem("cartItems") === null) {
     localStorage.setItem("cartItems", JSON.stringify([item]));
   } else {
-    const items = JSON.parse(localStorage.getItem("items"));
+    const items = JSON.parse(localStorage.getItem("cartItems"));
     items.push(item);
     localStorage.setItem("cartItems", JSON.stringify(items));
   }
