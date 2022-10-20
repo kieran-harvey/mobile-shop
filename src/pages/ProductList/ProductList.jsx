@@ -1,8 +1,33 @@
 import { Grid, Input } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ProductCard } from "../../components/ProductCard/ProductCard";
+import axios from "axios";
+import { URL, productURL } from "../../config";
+import {
+  checkValidationKey,
+  dataHasAlreadyBeenFetched,
+  getAllDataFromStorage,
+  setAllDataToStorage,
+} from "../../utils/utils";
 import "./productList.css";
-export const ProductList = ({ data }) => {
+export const ProductList = () => {
+  const [data, setData] = useState();
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      url: URL + productURL,
+    };
+    if (checkValidationKey()) {
+      if (dataHasAlreadyBeenFetched()) {
+        setData(getAllDataFromStorage());
+      } else {
+        axios.request(options).then((response) => {
+          setData(response.data);
+          setAllDataToStorage(response.data);
+        });
+      }
+    }
+  }, []);
   const [filter, setFilter] = useState("");
   const filterResults = (e) => {
     setFilter(e.currentTarget.value.toLowerCase());

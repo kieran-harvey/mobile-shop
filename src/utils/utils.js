@@ -1,5 +1,5 @@
 export const setValidationKey = () => {
-  const now = new Date().getTime() + 3600;
+  const now = new Date().getTime() + 3600000;
   const item = {
     expiry: now,
   };
@@ -7,8 +7,8 @@ export const setValidationKey = () => {
 };
 
 export const checkValidationKey = () => {
-  if (localStorage.getItem("key") !== null) {
-    const key = JSON.parse(localStorage.getItem("key"));
+  if (localStorage.getItem("validationKey") !== null) {
+    const key = JSON.parse(localStorage.getItem("validationKey"));
     if (key.expiry > new Date().getTime()) {
       return true;
     } else {
